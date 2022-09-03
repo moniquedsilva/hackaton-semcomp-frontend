@@ -1,5 +1,4 @@
-import { Button } from '@components/Button';
-import Login from '@pages/Login';
+import Login from '@pages/login';
 
 import * as S from './styles';
 
