@@ -1,15 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type StyledButtonProps = {
   maxWidth: number;
+  variant?: 'green' | 'blue';
 };
 
 export const Button = styled.button<StyledButtonProps>`
   width: 100%;
   height: 48px;
-  max-width: ${({ maxWidth }) => `${maxWidth}px`};
-
-  background-color: #1e40af;
 
   border-radius: 8px;
 
@@ -18,6 +16,11 @@ export const Button = styled.button<StyledButtonProps>`
   &:hover {
     opacity: 0.9;
   }
+
+  ${({ variant, maxWidth }) => css`
+    max-width: ${`${maxWidth}px`};
+    background-color: ${variant === 'green' ? '#10B981' : '#1E40AF'};
+  `};
 
   span {
     font-size: 16px;
