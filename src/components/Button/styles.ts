@@ -5,10 +5,19 @@ type StyledButtonProps = {
 };
 
 export const Button = styled.button<StyledButtonProps>`
-  height: 48px;
   width: 100%;
-  background-color: #1e40af;
+  height: 48px;
   max-width: ${({ maxWidth }) => `${maxWidth}px`};
+
+  background-color: #1e40af;
+
+  border-radius: 8px;
+
+  transition: all ease-in 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   span {
     font-size: 16px;
