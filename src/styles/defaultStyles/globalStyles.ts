@@ -1,35 +1,19 @@
-import { globalCss } from '@stitches/react';
+import { createGlobalStyle } from 'styled-components';
 
-export const globalStyles = globalCss({
-  '*': {
-    boxSizing: 'border-box',
-    margin: '0',
-    padding: '0',
-    outline: 0,
-
-    fontFamily:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-  },
-
-  body: {
-    lineHeight: 1,
-    background: '#FFFF',
-  },
-
-  html: {
-    fontSize: '16px',
-  },
-
-  button: {
-    cursor: 'pointer',
-    border: 0,
-  },
-
-  a: {
-    textDecoration: 'none',
-  },
-
-  span: {
-    display: 'block',
-  },
-});
+export const GlobalStyles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
+`;

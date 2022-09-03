@@ -1,3 +1,3 @@
-import { stitchesStyle } from '@styles/defaultStyles';
+import styled from 'styled-components';
 
-export const Container = stitchesStyle('div', {});
+export const Container = styled.div``;

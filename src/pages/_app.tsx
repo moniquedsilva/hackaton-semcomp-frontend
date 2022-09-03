@@ -1,11 +1,11 @@
-import { globalStyles } from '@styles/defaultStyles/globalStyles';
+import { GlobalStyles } from '@styles/defaultStyles/globalStyles';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  globalStyles();
   return (
     <>
+      <GlobalStyles />
       <Head>
         <title>Boilerplate VOID</title>
 
@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="Portuguese" />
       </Head>
+
       <Component {...pageProps} />
     </>
   );
