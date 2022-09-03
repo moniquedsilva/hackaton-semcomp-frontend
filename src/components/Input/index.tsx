@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import * as S from './styles';
 
-type InputProps = {
-  placeholder: string;
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  value: string;
-  name?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
+}
 
 export const Input = ({
   placeholder,
