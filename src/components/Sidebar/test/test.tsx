@@ -6,6 +6,8 @@ describe('Component | Sidebar', () => {
   it('should render the Sidebar', () => {
     render(<Sidebar />);
 
-    expect(screen.getByRole('heading', { name: /Sidebar/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /Sidebar/i })
+    ).toBeInTheDocument();
   });
 });
